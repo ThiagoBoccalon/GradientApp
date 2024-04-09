@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradientApp.MainPage"
+             Shell.NavBarIsVisible="False"
+             >
+
+    <Grid x:Name="background">
+        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStop Offset="0.0" Color="#051937" />
+                <GradientStop Offset="0.25" Color="#004d7a" />
+                <GradientStop Offset="0.50" Color="#008793" />
+                <GradientStop Offset="0.75" Color="#00bf72" />
+                <GradientStop Offset="1" Color="#a8eb12" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid>            
+            <Button Grid.Row="1"                    
+                    Opacity=".6" 
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Margin="0,0,0,30"
+                    BackgroundColor="White" 
+                    WidthRequest="350"
+                    HeightRequest="50"
+                    BorderColor="BlanchedAlmond"
+                    BorderWidth="1.2"
+                    CornerRadius="25"
+                    VerticalOptions="End"
+                    Text="Get a New Background"
+                    Clicked="ButtonGenerateNewGradientColour"/>
+        </Grid>
+    </Grid>
+</ContentPage>
